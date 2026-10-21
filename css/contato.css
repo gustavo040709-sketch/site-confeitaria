@@ -1,0 +1,132 @@
+.contato {
+    padding: 36px 20px 56px;
+}
+
+.endereco-section {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px;
+    border: 2px solid #D48884;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.endereco-section h2 {
+    margin-top: 0;
+    color: #D48884;
+    text-align: center;
+}
+
+.endereco-section > p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#form-endereco {
+    display: grid;
+    gap: 18px;
+}
+
+.campos-endereco {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(100px, 1fr);
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    color: #593b39;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.campo input {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    padding: 9px 11px;
+    border: 1px solid #c9a4a1;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.campo input:focus {
+    border-color: #D48884;
+    outline: 2px solid rgba(212, 136, 132, 0.25);
+}
+
+.campo-cep {
+    max-width: 220px;
+}
+
+.campo-logradouro {
+    grid-column: 1;
+}
+
+.campo-numero {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.campo-uf {
+    max-width: 120px;
+}
+
+.mensagem-cep,
+.mensagem-formulario {
+    min-height: 20px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.mensagem-cep {
+    color: #593b39;
+}
+
+.mensagem-formulario {
+    color: #426b3c;
+}
+
+#form-endereco button {
+    justify-self: start;
+    padding: 11px 20px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #D48884;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#form-endereco button:hover {
+    background-color: #bd706c;
+}
+
+@media (max-width: 700px) {
+    .endereco-section {
+        padding: 20px;
+    }
+
+    .endereco-section h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .campos-endereco {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-logradouro,
+    .campo-numero {
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
